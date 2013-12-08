@@ -1,9 +1,11 @@
 #include "SplashScreen.h"
 
 
-SplashScreen::SplashScreen(std::string screenName, Stalker *stalker) : 
-Screen(screenName, ScreenTypes::SplashScreen, stalker)
+SplashScreen::SplashScreen(std::string screenName, Stalker *stalker)
 {
+	m_screenName = screenName;
+	m_stalker = stalker;
+	m_screenType = ScreenTypes::SplashScreen;
 }
 
 SplashScreen::~SplashScreen()

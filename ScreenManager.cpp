@@ -13,18 +13,18 @@ ScreenManager::~ScreenManager()
 {
 }
 
-Screen& ScreenManager::GetScreenByName(std::string screenName)
+Screen* ScreenManager::GetScreenByName(std::string screenName)
 {
 	if (m_screenCollection.size() > 0)
 	{
 		for (vector<Screen>::iterator it = m_screenCollection.begin(); it != m_screenCollection.end(); ++it)
 		{
 			if (!(*it).GetScreenName().compare(screenName))
-				return (*it);
+				return &(*it);
 		}
 	}
 
-	return Screen("NULL", ScreenTypes::None, nullptr);
+	return NULL;
 }
 
 void ScreenManager::AddScreen(std::string screenName, ScreenTypes screenType)

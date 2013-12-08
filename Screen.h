@@ -12,7 +12,6 @@ class Screen
 
 	public:
 	Screen();
-	Screen(std::string screenName, ScreenTypes screenType, Stalker *stalker);
 	~Screen();
 
 	virtual int InputHandling();

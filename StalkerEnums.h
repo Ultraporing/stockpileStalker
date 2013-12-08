@@ -22,6 +22,7 @@ struct ScreenTypes
 		None, SplashScreen, MainScreen, Credits
 	};
 	Type t_;
+	ScreenTypes() : t_(None){}
 	ScreenTypes(Type t) : t_(t) {}
 	operator Type () const { return t_; }
 	private:
