@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{B2B9C47D-FE9A-4AF1-BD84-8211D770816C}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>stockpilestalker</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v100</PlatformToolset>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <IntDir>stockpilestalker.dir\Release\</IntDir>
+    <TargetName>stockpilestalker.plug</TargetName>
+    <OutDir>C:\Users\Tobias\Desktop\dfhack-master\dfhack-master\src\dfhack\build\VC2010\plugins\Release\</OutDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;STOCKPILESTALKER_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>
+      </FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;DFHACK_VERSION="0.34.11-r4";PROTOBUF_USE_DLLS;LUA_BUILD_AS_DLL;WIN32;CMAKE_INTDIR="Release";stockpilestalker_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>C:/Users/Tobias/Desktop/dfhack-master/dfhack-master/src/dfhack/depends/protobuf;C:/Users/Tobias/Desktop/dfhack-master/dfhack-master/src/dfhack/depends/lua/include;C:/Users/Tobias/Desktop/dfhack-master/dfhack-master/src/dfhack/depends/md5;C:/Users/Tobias/Desktop/dfhack-master/dfhack-master/src/dfhack/depends/tinyxml;C:/Users/Tobias/Desktop/dfhack-master/dfhack-master/src/dfhack/depends/tthread;C:/Users/Tobias/Desktop/dfhack-master/dfhack-master/src/dfhack/depends/zlib/include;C:/Users/Tobias/Desktop/dfhack-master/dfhack-master/src/dfhack/depends/clsocket/src;C:/Users/Tobias/Desktop/dfhack-master/dfhack-master/src/dfhack/library/include;C:/Users/Tobias/Desktop/dfhack-master/dfhack-master/src/dfhack/library/proto;C:/Users/Tobias/Desktop/dfhack-master/dfhack-master/src/dfhack/plugins/proto;C:/Users/Tobias/Desktop/dfhack-master/dfhack-master/src/dfhack/library/depends/xgetopt;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <AssemblerListingLocation>Release/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DisableSpecificWarnings>4819</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;..\..\library\Release\SDL.lib</AdditionalDependencies>
+      <ProgramDatabaseFile>C:/Users/Tobias/Desktop/dfhack-master/dfhack-master/src/dfhack/build/VC2010/plugins/Release/stockpilestalker.pdb</ProgramDatabaseFile>
+      <ImportLibrary>C:/Users/Tobias/Desktop/dfhack-master/dfhack-master/src/dfhack/build/VC2010/plugins/Release/stockpilestalker.lib</ImportLibrary>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="stockpilestalker.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\VC2010\library\dfhack.vcxproj">
+      <Project>{c841c6dc-eca2-417b-ae9b-325fa82b8ce5}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\VC2010\plugins\generate_proto.vcxproj">
+      <Project>{919c02ce-f6b5-48fa-9fed-e8d7b6644e55}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\VC2010\ZERO_CHECK.vcxproj">
+      <Project>{5771b698-719a-4f89-842f-7eb8ad2d81a0}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
